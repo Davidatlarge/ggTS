@@ -1,5 +1,7 @@
 #### draws a TS diagram using ggplot2
 # created by David Kaiser, david.kaiser.82@gmail.com
+# in prep:
+# write isopycnal values on the top as well (currently only on the right)
 
 # arguments
 ggTS_DK <- function(
