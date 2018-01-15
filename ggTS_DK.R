@@ -1,5 +1,5 @@
 #### draws a TS diagram using ggplot2
-# created by David Kaiser, david.kaiser.82@gmail.com
+# created by David Kaiser
 # in prep:
 # write isopycnal values on the top as well (currently only on the right)
 
