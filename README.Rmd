@@ -42,7 +42,7 @@ head(example)
 
 The data will be plotted using the *ggplot2* package.
 
-```{r pressure, echo=TRUE, message=FALSE}
+```{r, echo=TRUE, message=FALSE}
 ggTS_DK(sal = example$salinity, 
         pot.temp = example$potential.temperature, 
         reference.p = 0,
@@ -51,6 +51,18 @@ ggTS_DK(sal = example$salinity,
 ```
 
 **NOTE**: the special "Â" character does not show when the function is used in R, this seems to be a markdown/knitr problem
+
+Since the result is a ggplot, it can be altered and amended:
+```{r, echo=TRUE, message=FALSE}
+p1 <- ggTS_DK(sal = example$salinity, 
+        pot.temp = example$potential.temperature, 
+        reference.p = 0,
+        col.par = example$depth, 
+        col.name = "depth [m]")
+p1 + scale_color_gradient(low = "grey", high = "black", name = "somthing\nelse") +
+      annotate(geom = "text", x = 15, y = 6, color = "red", size = 14, label = "ADD\nSTUFF")
+
+```
 
 ### in preparation
 

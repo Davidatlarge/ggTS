@@ -52,9 +52,23 @@ ggTS_DK(sal = example$salinity,
         col.name = "depth [m]")
 ```
 
-![](README_files/figure-markdown_github/pressure-1.png)
+![](README_files/figure-markdown_github/unnamed-chunk-2-1.png)
 
 **NOTE**: the special "Â" character does not show when the function is used in R, this seems to be a markdown/knitr problem
+
+Since the result is a ggplot, it can be altered and amended:
+
+``` r
+p1 <- ggTS_DK(sal = example$salinity, 
+        pot.temp = example$potential.temperature, 
+        reference.p = 0,
+        col.par = example$depth, 
+        col.name = "depth [m]")
+p1 + scale_color_gradient(low = "grey", high = "black", name = "somthing\nelse") +
+      annotate(geom = "text", x = 15, y = 6, color = "red", size = 14, label = "ADD\nSTUFF")
+```
+
+![](README_files/figure-markdown_github/unnamed-chunk-3-1.png)
 
 ### in preparation
 
