@@ -1,10 +1,7 @@
-README
+create a TS diagram as a ggplot
 ================
 David Kaiser
 2018/01/16
-
-create a TS diagram as a ggplot
--------------------------------
 
 ### Description
 
@@ -52,7 +49,7 @@ ggTS_DK(sal = example$salinity,
         col.name = "depth [m]")
 ```
 
-![](README_files/figure-markdown_github/unnamed-chunk-2-1.png)
+![](README_files/figure-markdown_github/plot_result-1.png)
 
 **NOTE**: the special "Â" character does not show when the function is used in R, this seems to be a markdown/knitr problem
 
@@ -68,7 +65,7 @@ p1 + scale_color_gradient(low = "grey", high = "black", name = "somthing\nelse")
       annotate(geom = "text", x = 15, y = 6, color = "red", size = 14, label = "ADD\nSTUFF")
 ```
 
-![](README_files/figure-markdown_github/unnamed-chunk-3-1.png)
+![](README_files/figure-markdown_github/extenden_plot-1.png)
 
 ### in preparation
 

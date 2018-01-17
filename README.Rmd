@@ -1,5 +1,5 @@
 ---
-title: "README"
+title: "create a TS diagram as a ggplot"
 author: "David Kaiser"
 date: "2018/01/16"
 output: github_document
@@ -9,8 +9,6 @@ output: github_document
 knitr::opts_chunk$set(echo = TRUE)
 source("ggTS_DK.R")
 ```
-
-## create a TS diagram as a ggplot
 
 ### Description
 
@@ -34,7 +32,7 @@ A third vector can optionally be supplied to **col.par** to be plotted in color,
 
 ### Plot
 
-```{r}
+```{r example_data}
 example <- read.csv("example_data/example_data.csv")
 
 head(example)
@@ -42,7 +40,7 @@ head(example)
 
 The data will be plotted using the *ggplot2* package.
 
-```{r echo=TRUE, message=FALSE, warning=FALSE}
+```{r plot_result, echo=TRUE, message=FALSE, warning=FALSE}
 ggTS_DK(sal = example$salinity, 
         pot.temp = example$potential.temperature, 
         reference.p = 0,
@@ -53,7 +51,7 @@ ggTS_DK(sal = example$salinity,
 **NOTE**: the special "Â" character does not show when the function is used in R, this seems to be a markdown/knitr problem
 
 Since the result is a ggplot, it can be altered and amended:
-```{r echo=TRUE, message=FALSE, warning=FALSE}
+```{r extenden_plot, echo=TRUE, message=FALSE, warning=FALSE}
 p1 <- ggTS_DK(sal = example$salinity, 
         pot.temp = example$potential.temperature, 
         reference.p = 0,
