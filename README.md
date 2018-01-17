@@ -52,10 +52,6 @@ ggTS_DK(sal = example$salinity,
         col.name = "depth [m]")
 ```
 
-    ## Warning: package 'gsw' was built under R version 3.4.3
-
-    ## Warning: package 'testthat' was built under R version 3.4.3
-
 ![](README_files/figure-markdown_github/unnamed-chunk-2-1.png)
 
 **NOTE**: the special "Â" character does not show when the function is used in R, this seems to be a markdown/knitr problem
