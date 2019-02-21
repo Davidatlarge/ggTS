@@ -81,7 +81,7 @@ ggTS <- function(
   if(exists("v.isopycnals")){
     p1 <- p1 + geom_text(data = v.isopycnals,
                          aes(x = sal, y = ceiling(max(TS$pot.temp)), label = density),
-                         hjust = "inward", vjust = 0, col = "grey")
+                         vjust = "inward", hjust = 0, col = "grey")
   }
 
   return(p1)

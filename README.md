@@ -31,18 +31,18 @@ example <- read.csv("example_data/example_data.csv")
 head(example)
 ```
 
-    ##   X depth potential.temperature salinity
-    ## 1 1  1.50                6.1272  13.2087
-    ## 2 2  1.75                6.1245  13.2115
-    ## 3 3  2.00                6.1236  13.2128
-    ## 4 4  2.25                6.1227  13.2126
-    ## 5 5  2.50                6.1229  13.2145
-    ## 6 6  2.75                6.1224  13.2122
+    ##   depth potential.temperature salinity
+    ## 1  1.50                6.1272  13.2087
+    ## 2  1.75                6.1245  13.2115
+    ## 3  2.00                6.1236  13.2128
+    ## 4  2.25                6.1227  13.2126
+    ## 5  2.50                6.1229  13.2145
+    ## 6  2.75                6.1224  13.2122
 
 The data will be plotted using the *ggplot2* package.
 
 ``` r
-ggTS_DK(sal = example$salinity, 
+ggTS(sal = example$salinity, 
         pot.temp = example$potential.temperature, 
         reference.p = 0,
         col.par = example$depth, 
@@ -51,22 +51,44 @@ ggTS_DK(sal = example$salinity,
 
 ![](README_files/figure-markdown_github/plot_result-1.png)
 
-**NOTE**: the special "Â" character does not show when the function is used in R, this seems to be a markdown/knitr problem
+**NOTE**: the special "Ã" character does not show when the function is used in R, this seems to be a markdown/knitr problem
 
 Since the result is a ggplot, it can be altered and amended:
 
 ``` r
-p1 <- ggTS_DK(sal = example$salinity, 
+p1 <- ggTS(sal = example$salinity, 
         pot.temp = example$potential.temperature, 
         reference.p = 0,
         col.par = example$depth, 
         col.name = "depth [m]")
-p1 + scale_color_gradient(low = "grey", high = "black", name = "somthing\nelse") +
+p1 + scale_color_gradient(low = "grey", high = "black", name = "something\nelse") +
       annotate(geom = "text", x = 15, y = 6, color = "red", size = 14, label = "ADD\nSTUFF")
 ```
 
-![](README_files/figure-markdown_github/extenden_plot-1.png)
+![](README_files/figure-markdown_github/extend_plot-1.png)
 
-### in preparation
+Plot a TS diagram with isopycnals running more horizontally
 
-**Isopycnal labels**: Currently the isopycnals are not labeled in the example. For cases in which the isopycnals run fairly horizontally through the plot and cut through its right side edge, and in which the calculated potential density range is large enough, this works already. But this is not the case for the example data.
+``` r
+example1 <- read.csv("example_data/example_data1.csv")
+
+head(example1)
+```
+
+    ##   depth potential.temperature salinity
+    ## 1     0              24.30924 34.36559
+    ## 2    10              24.09002 34.30511
+    ## 3    20              23.58654 34.32923
+    ## 4    30              23.19063 34.38134
+    ## 5    40              22.88482 34.44991
+    ## 6    50              22.45423 34.50933
+
+``` r
+ggTS(sal = example1$salinity, 
+        pot.temp = example1$potential.temperature, 
+        reference.p = 0,
+        col.par = example1$depth, 
+        col.name = "depth [m]")
+```
+
+![](README_files/figure-markdown_github/plot_result1-1.png)
