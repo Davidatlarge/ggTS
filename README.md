@@ -49,9 +49,9 @@ ggTS(sal = example$salinity,
         col.name = "depth [m]")
 ```
 
-![](README_files/figure-markdown_github-ascii_identifiers/plot_result-1.png)
+![](README_files/figure-markdown_github/plot_result-1.png)
 
-**NOTE**: the special "Ã" character does not show when the function is used in R, this seems to be a markdown/knitr problem
+**NOTE**: the special "Â" character does not show when the function is used in R, this seems to be a markdown/knitr problem
 
 Since the result is a ggplot, it can be altered and amended:
 
@@ -65,11 +65,7 @@ p1 + scale_color_gradient(low = "grey", high = "black", name = "something\nelse"
       annotate(geom = "text", x = 15, y = 6, color = "red", size = 14, label = "ADD\nSTUFF")
 ```
 
-<<<<<<< HEAD
 ![](README_files/figure-markdown_github/extend_plot-1.png)
-=======
-![](README_files/figure-markdown_github-ascii_identifiers/extenden_plot-1.png)
->>>>>>> f7d36c6a35755238946e9eb74e04d9e88625ebcf
 
 Plot a TS diagram with isopycnals running more horizontally
 
