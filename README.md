@@ -5,7 +5,7 @@ David Kaiser
 
 ### Description
 
-A TS diagram, Temperature-Salinity-diagram, plots the **potential temperature** of water over **salinity**. Many water masses have characteristic shapes in a TS diagram, which is used in physical oceanography to identify water masses and their mixing (see e.g. <https://doi.org/10.1016/S0422-9894(08)71172-3>).
+A TS diagram, Temperature-Salinity-diagram, plots the **potential temperature** of water over **salinity**. Many water masses have characteristic shapes in a TS diagram, [which is used in physical oceanography to identify water masses and their mixing.](https://doi.org/10.1016/S0422-9894(08)71172-3)
 
 This function requires the input of vectors of **potential temperature** and **salinity**. The *gws* package is used to calculate potential density for plotting of isopycnals (contours of the same density). This calculation requires a **reference pressure**, which defaults to 0, the sea surface.
 
@@ -49,7 +49,7 @@ ggTS(sal = example$salinity,
         col.name = "depth [m]")
 ```
 
-![](README_files/figure-markdown_github/plot_result-1.png)
+![](README_files/figure-markdown_github-ascii_identifiers/plot_result-1.png)
 
 **NOTE**: the special "Ã" character does not show when the function is used in R, this seems to be a markdown/knitr problem
 
@@ -65,7 +65,11 @@ p1 + scale_color_gradient(low = "grey", high = "black", name = "something\nelse"
       annotate(geom = "text", x = 15, y = 6, color = "red", size = 14, label = "ADD\nSTUFF")
 ```
 
+<<<<<<< HEAD
 ![](README_files/figure-markdown_github/extend_plot-1.png)
+=======
+![](README_files/figure-markdown_github-ascii_identifiers/extenden_plot-1.png)
+>>>>>>> f7d36c6a35755238946e9eb74e04d9e88625ebcf
 
 Plot a TS diagram with isopycnals running more horizontally
 
