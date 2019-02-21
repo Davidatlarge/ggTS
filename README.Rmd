@@ -2,7 +2,9 @@
 title: "create a TS diagram as a ggplot"
 author: "David Kaiser"
 date: "2018/01/16"
-output: github_document
+output: 
+  pdf_document: 
+    keep_tex: yes
 ---
 
 ```{r setup, include=FALSE}
@@ -57,7 +59,7 @@ p1 <- ggTS_DK(sal = example$salinity,
         reference.p = 0,
         col.par = example$depth, 
         col.name = "depth [m]")
-p1 + scale_color_gradient(low = "grey", high = "black", name = "somthing\nelse") +
+p1 + scale_color_gradient(low = "grey", high = "black", name = "something\nelse") +
       annotate(geom = "text", x = 15, y = 6, color = "red", size = 14, label = "ADD\nSTUFF")
 
 ```
