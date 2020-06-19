@@ -18,6 +18,9 @@ This function requires the input of vectors of **potential temperature** and **s
 
 A third vector can optionally be supplied to **col.par** to be plotted in color, and can be named with a string supplied to **col.name**.
 
+Use [![DOI](https://zenodo.org/badge/112729228.svg)](https://zenodo.org/badge/latestdoi/112729228) to cite a permanent archived version of the function.
+
+
 ### Arguments
 
   *sal* -- vector of salinity values
